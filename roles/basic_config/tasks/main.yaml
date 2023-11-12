@@ -1,0 +1,42 @@
+---
+
+- name: Configure hostname
+  ios_hostname:
+    config:
+      hostname: "{{ inventory_hostname | upper }}"
+    state: merged
+  when: layer == "access"
+
+
+- name: Configure name servers
+  ios_system:
+    name_servers:
+      - 8.8.8.8
+      - 8.8.4.4
+  when: layer == "access"
+
+- name: Configure the login banner
+  ios_banner:
+    banner: motd
+    text: "{{banner_message}}"
+    state: present
+
+- name: Add a new user
+  ios_user:
+    name: "{{ new_user_username }}"
+    configured_password: "{{ new_user_pass }}"
+    password_type: password
+  when: layer == "access"
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,7 @@
+---
+- name: playbook for exam
+  hosts: access_switches
+  gather_facts: false
+  roles:
+    # - basic_config
+    - config_interfaces_with_template

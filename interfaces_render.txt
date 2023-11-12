@@ -1,0 +1,17 @@
+interface GigabitEthernet1/0
+    description TRUNK
+        switchport trunk encapsulation dot1q
+    switchport mode trunk
+    end
+interface GigabitEthernet1/1
+    description ACCESS TO VLAN 20
+        switchport access vlan 20
+end
+interface GigabitEthernet1/2
+    description ACCESS TO VLAN 20
+        switchport access vlan 20
+end
+interface GigabitEthernet1/3
+    description ACCESS TO VLAN 20
+        switchport access vlan 20
+end

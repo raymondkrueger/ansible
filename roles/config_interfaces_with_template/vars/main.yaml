@@ -1,0 +1,16 @@
+interfaces:
+  - name: "GigabitEthernet1/0"
+    description: "TRUNK"
+    porttype: "trunk"
+  - name: "GigabitEthernet1/1"
+    description: "ACCESS TO VLAN 20"
+    porttype: "access"
+    vlan: 20
+  - name: "GigabitEthernet1/2"
+    description: "ACCESS TO VLAN 20"
+    porttype: "access"
+    vlan: 20
+  - name: "GigabitEthernet1/3"
+    description: "ACCESS TO VLAN 20"
+    porttype: "access"
+    vlan: 20

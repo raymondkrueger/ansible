@@ -1,0 +1,11 @@
+{% for interface in interfaces %}
+interface {{ interface['name'] }}
+    description {{ interface['description'] }}
+    {% if interface['porttype'] == "trunk" %}
+    switchport trunk encapsulation dot1q
+    switchport mode trunk
+    {% elif interface['porttype'] == "access" %}
+    switchport access vlan {{ interface['vlan'] }}
+{%endif%}
+end
+{% endfor %}

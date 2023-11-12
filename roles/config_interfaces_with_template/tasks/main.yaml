@@ -1,0 +1,11 @@
+---
+- name: Configure interfaces
+  cisco.ios.ios_config:
+    src: interfaces.j2
+  register: output
+#   debugger: on_failed
+
+- name: Test jinja2template
+  template: 
+    src: interfaces.j2
+    dest: interfaces_render.txt
